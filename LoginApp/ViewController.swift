@@ -43,7 +43,6 @@ class ViewController: UIViewController {
                 Title: "invaild login or password",
                 Message: "Please try again"
             )
-            userNameTF.text = ""
             passwordTF.text = ""
         }
     }

@@ -16,16 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button toolTip="sadfgbdaf" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5RE-TV-Urc">
-                                <rect key="frame" x="34" y="296" width="186" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZI-iH-R0G">
+                                <rect key="frame" x="218" y="295" width="121" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" button="YES" playsSound="YES" staticText="YES"/>
-                                </accessibility>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Fogot user name?"/>
+                                <state key="normal" title="Fogot  password?"/>
                                 <connections>
-                                    <action selector="fogotUserDidTaped" destination="BYZ-38-t0r" eventType="touchUpInside" id="aL5-ak-pPp"/>
+                                    <action selector="fogotPassDidTaped" destination="BYZ-38-t0r" eventType="touchUpInside" id="9xS-iV-wLL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rsi-D9-Ved">
@@ -55,13 +52,16 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="fOj-ll-Qrg"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZI-iH-R0G">
-                                <rect key="frame" x="218" y="295" width="121" height="30"/>
+                            <button toolTip="sadfgbdaf" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5RE-TV-Urc">
+                                <rect key="frame" x="34" y="295" width="176" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" playsSound="YES" staticText="YES"/>
+                                </accessibility>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Fogot  password?"/>
+                                <state key="normal" title="Fogot user name?"/>
                                 <connections>
-                                    <action selector="fogotPassDidTaped" destination="BYZ-38-t0r" eventType="touchUpInside" id="9xS-iV-wLL"/>
+                                    <action selector="fogotUserDidTaped" destination="BYZ-38-t0r" eventType="touchUpInside" id="aL5-ak-pPp"/>
                                 </connections>
                             </button>
                         </subviews>
