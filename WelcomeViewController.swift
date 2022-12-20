@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class GrettingViewController: UIViewController {
+class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var grettingTF: UILabel!
     

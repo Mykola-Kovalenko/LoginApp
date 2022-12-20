@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class  LoginViewController: UIViewController {
     
     
     @IBOutlet var userNameTF: UITextField!
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destinationVC = segue.destination as? GrettingViewController else { return }
+        guard let destinationVC = segue.destination as? WelcomeViewController else { return }
         let  greettings = "Hello, \(userNameTF.text ?? "...")"
         destinationVC.userName = greettings
     }
@@ -67,7 +67,7 @@ class ViewController: UIViewController {
     
     // MARK: - Alerts
 }
-extension ViewController {
+extension  LoginViewController {
     private func showAlert(Title title: String, Message message: String) {
         let userAlert = UIAlertController(title: title, message: message , preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default)
