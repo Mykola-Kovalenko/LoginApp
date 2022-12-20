@@ -16,15 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZI-iH-R0G">
-                                <rect key="frame" x="218" y="295" width="121" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Fogot  password?"/>
-                                <connections>
-                                    <action selector="fogotPassDidTaped" destination="BYZ-38-t0r" eventType="touchUpInside" id="9xS-iV-wLL"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rsi-D9-Ved">
                                 <rect key="frame" x="161.33333333333334" y="245.00000000000003" width="70.333333333333343" height="34.333333333333343"/>
                                 <state key="normal" title="Button"/>
@@ -32,6 +23,17 @@
                                 <connections>
                                     <action selector="loginButtonDidTAped" destination="BYZ-38-t0r" eventType="touchUpInside" id="srj-xX-Itz"/>
                                     <segue destination="Rou-d9-F6T" kind="show" id="HvV-5u-DJY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TZI-iH-R0G">
+                                <rect key="frame" x="227" y="311" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TZI-iH-R0G" secondAttribute="height" multiplier="5:1" id="4uz-E5-OuU"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Fogot  password?"/>
+                                <connections>
+                                    <action selector="fogotPassDidTaped" destination="BYZ-38-t0r" eventType="touchUpInside" id="9xS-iV-wLL"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hnk-3h-pqf">
@@ -52,12 +54,14 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="fOj-ll-Qrg"/>
                                 </constraints>
                             </stackView>
-                            <button toolTip="sadfgbdaf" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5RE-TV-Urc">
-                                <rect key="frame" x="34" y="295" width="176" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button toolTip="sadfgbdaf" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5RE-TV-Urc">
+                                <rect key="frame" x="16" y="311" width="129" height="30"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" playsSound="YES" staticText="YES"/>
                                 </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5RE-TV-Urc" secondAttribute="height" multiplier="43:10" id="dtw-wS-md4"/>
+                                </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Fogot user name?"/>
                                 <connections>
@@ -69,9 +73,15 @@
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstItem="hnk-3h-pqf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Yc-tU-1Om"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TZI-iH-R0G" secondAttribute="trailing" constant="16" id="MnA-VX-Vy3"/>
                             <constraint firstItem="hnk-3h-pqf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Off-US-Woh"/>
                             <constraint firstItem="Rsi-D9-Ved" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PFT-2F-TdR"/>
+                            <constraint firstItem="Rsi-D9-Ved" firstAttribute="leading" secondItem="5RE-TV-Urc" secondAttribute="trailing" constant="16.333333333333343" id="SRQ-Jq-gVj"/>
+                            <constraint firstItem="5RE-TV-Urc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="a75-T8-lor"/>
+                            <constraint firstItem="TZI-iH-R0G" firstAttribute="leading" secondItem="Rsi-D9-Ved" secondAttribute="trailing" constant="-4.6666666666666856" id="eFU-TS-omb"/>
                             <constraint firstItem="Rsi-D9-Ved" firstAttribute="top" secondItem="hnk-3h-pqf" secondAttribute="bottom" constant="10" id="gmE-lF-SFS"/>
+                            <constraint firstItem="TZI-iH-R0G" firstAttribute="baseline" secondItem="5RE-TV-Urc" secondAttribute="firstBaseline" id="gs5-W3-eIx"/>
+                            <constraint firstItem="TZI-iH-R0G" firstAttribute="top" secondItem="Rsi-D9-Ved" secondAttribute="bottom" constant="31.666666666666629" id="ozJ-x0-4ZK"/>
                         </constraints>
                     </view>
                     <connections>
@@ -102,9 +112,11 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESn-yU-NqW">
-                                <rect key="frame" x="154" y="650" width="85" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESn-yU-NqW">
+                                <rect key="frame" x="154" y="653" width="85" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ESn-yU-NqW" secondAttribute="height" multiplier="17:7" id="cIe-PT-6NR"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
                                 <connections>
@@ -117,7 +129,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="uzj-el-dfW" firstAttribute="top" secondItem="wTL-QL-9Vy" secondAttribute="top" constant="100" id="Ajh-FA-qOG"/>
+                            <constraint firstItem="wTL-QL-9Vy" firstAttribute="bottom" secondItem="ESn-yU-NqW" secondAttribute="bottom" constant="130" id="Ff2-Y6-smX"/>
+                            <constraint firstItem="wTL-QL-9Vy" firstAttribute="trailing" secondItem="ESn-yU-NqW" secondAttribute="trailing" constant="154" id="JIc-di-eZ2"/>
                             <constraint firstItem="uzj-el-dfW" firstAttribute="centerX" secondItem="qhq-qN-BK8" secondAttribute="centerX" id="a0B-c0-0mi"/>
+                            <constraint firstItem="ESn-yU-NqW" firstAttribute="leading" secondItem="wTL-QL-9Vy" secondAttribute="leading" constant="154" id="sca-gp-cZO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2hd-8s-Oo4"/>
