@@ -13,17 +13,22 @@ class ViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-private var user = "User"
-private var password = "Password"
- 
+    private var user = "User"
+    private var password = "Password"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         // Do any additional setup after loading the view.
     }
-
-
-
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destinationVC = segue.destination as? GrettingViewController else { return }
         let  greettings = "Hello, \(userNameTF.text ?? "...")"
@@ -31,28 +36,48 @@ private var password = "Password"
     }
     
     
-  
-        
+    @IBAction func loginButtonDidTAped() {
+        if userNameTF.text == user, passwordTF.text == password {
+        } else {
+            showAlert(
+                Title: "invaild login or password",
+                Message: "Please try again"
+            )
+            userNameTF.text = ""
+            passwordTF.text = ""
+        }
+    }
     
+    @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
+        userNameTF.text = ""
+        passwordTF.text = ""
+    }
     
     
     @IBAction func fogotUserDidTaped() {
-        showAlert("OOPS!", "Your name is (User) 🤣")
+        showAlert(Title: "OOPS!",
+                  Message: "Your name is (User) 🤣"
+        )
     }
     @IBAction func fogotPassDidTaped() {
-        showAlert("OOPS!", "Your pass is (Password) 🤣")
+        showAlert(Title: "OOPS!",
+                  Message: "Your pass is (Password) 🤣"
+        )
     }
-
+    
     
     // MARK: - Alerts
 }
 extension ViewController {
-    private func showAlert(_ title: String,_ message: String) {
+    private func showAlert(Title title: String, Message message: String) {
         let userAlert = UIAlertController(title: title, message: message , preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default)
         userAlert.addAction(okAction)
         present(userAlert, animated: true)
     }
 }
-      
+
+
+
+
 
